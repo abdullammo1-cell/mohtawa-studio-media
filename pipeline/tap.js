@@ -1,0 +1,3 @@
+
+window.addEventListener('DOMContentLoaded',()=>{const s=document.createElement('style');s.textContent='.tapdot{position:fixed;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:rgba(37,99,235,.35);border:3px solid rgba(37,99,235,.9);pointer-events:none;z-index:99999;animation:tp .6s ease-out forwards}@keyframes tp{from{transform:scale(.4);opacity:1}to{transform:scale(1.3);opacity:0}}';document.head.appendChild(s);
+document.addEventListener('pointerdown',e=>{const d=document.createElement('div');d.className='tapdot';d.style.left=e.clientX+'px';d.style.top=e.clientY+'px';document.body.appendChild(d);setTimeout(()=>d.remove(),700)},true)});
