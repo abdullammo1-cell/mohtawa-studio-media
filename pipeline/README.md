@@ -27,6 +27,8 @@ Times (UTC): reels 07:00, 11:00, 14:30, 17:00, 19:30 | carousels 09:00, 13:00, 1
 5. Voiceover: Gemini TTS in Google AI Studio (built-in browser on the Mac), voice Koda, style:
    "Native Gulf Arabic dialect (Saudi/Emirati colloquial, not Modern Standard). Young male content creator, energetic, confident and friendly, fast-paced Instagram reel delivery."
    Put the 5 scripts in 5 blocks, generate, then Download -> the file lands in ~/Downloads as "Generated Audio <date> - <time>.wav"
+   New AI Studio UI (Nov 2026): Create new dialog -> blocks alternate Speaker 1/2, so set BOTH speakers to Koda in Speaker settings, and set Style on each block (the Style button keeps the name "Style", use nth(i)).
+   If the Download click leaves only a hidden temp file in ~/Downloads (.XXXX.com.anthropic.claudefordesktop.XXXX), it is the complete WAV: copy it out and use it.
    Warning: two downloads in the same minute overwrite each other. Wait for the minute to change between downloads.
    Split: the cuts between blocks are silences of ~0.5-0.8s; match them to each script's character count (rate ~14 chars/second)
 6. Assembly: `python3 assemble.py <dir> '<specs json>'`
