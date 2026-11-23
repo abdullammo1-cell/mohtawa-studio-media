@@ -23,7 +23,7 @@ Times (UTC): reels 07:00, 11:00, 14:30, 17:00, 19:30 | carousels 09:00, 13:00, 1
    قائمة تتكشّف: title + 5 short items max
    محادثة: each line a message, + continues the same side (11 lines max)
    هوك ثابت: one line (keep ? and ! next to plain words, not after an *asterisk* word)
-4. Demos: `python3 recdemo.py cal|hooks` (30-day plan / hooks library), rec5.py = reel maker
+4. Demos: `python3 recdemo.py cal|hooks` (30-day plan / hooks library), rec5.py = reel maker, `python3 reccar.py "<topic>" points.txt out` = carousel maker + "حوّله إلى ريل" (used 2026-11-26)
 5. Voiceover: Gemini TTS in Google AI Studio (built-in browser on the Mac), voice Koda, style:
    "Native Gulf Arabic dialect (Saudi/Emirati colloquial, not Modern Standard). Young male content creator, energetic, confident and friendly, fast-paced Instagram reel delivery."
    Put the 5 scripts in 5 blocks, generate, then Download -> the file lands in ~/Downloads as "Generated Audio <date> - <time>.wav"
