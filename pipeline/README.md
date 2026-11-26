@@ -23,13 +23,14 @@ Times (UTC): reels 07:00, 11:00, 14:30, 17:00, 19:30 | carousels 09:00, 13:00, 1
    قائمة تتكشّف: title + 5 short items max
    محادثة: each line a message, + continues the same side (11 lines max)
    هوك ثابت: one line (keep ? and ! next to plain words, not after an *asterisk* word)
-4. Demos: `python3 recdemo.py cal|hooks|ideas` (30-day plan / hooks library / 100-ideas library, ideas used 2026-11-27), rec5.py = reel maker, `python3 reccar.py "<topic>" points.txt out` = carousel maker + "حوّله إلى ريل" (used 2026-11-26)
+4. Demos: `python3 recdemo.py cal|hooks|ideas` (30-day plan / hooks library / 100-ideas library, ideas used 2026-11-27, hooks used 2026-11-29), rec5.py = reel maker, `python3 reccar.py "<topic>" points.txt out` = carousel maker + "حوّله إلى ريل" (used 2026-11-26)
 5. Voiceover: Gemini TTS in Google AI Studio (built-in browser on the Mac), voice Koda, style:
    "Native Gulf Arabic dialect (Saudi/Emirati colloquial, not Modern Standard). Young male content creator, energetic, confident and friendly, fast-paced Instagram reel delivery."
    Put the 5 scripts in 5 blocks, generate, then Download -> the file lands in ~/Downloads as "Generated Audio <date> - <time>.wav"
    New AI Studio UI (Nov 2026): Create new dialog -> blocks alternate Speaker 1/2, so set BOTH speakers to Koda in Speaker settings, and set Style on each block (the Style button keeps the name "Style", use nth(i)).
    If the Download click leaves only a hidden temp file in ~/Downloads (.XXXX.com.anthropic.claudefordesktop.XXXX), it is the complete WAV: copy it out and use it.
    Warning: two downloads in the same minute overwrite each other. Wait for the minute to change between downloads.
+   2026-11-29: with the Claude app not open on the Mac (unattended run), Download saved nothing to ~/Downloads, so day 8 went out silent (text reels + demo with caption pills, src/pills.py). Silent track: ffmpeg anullsrc as the vo wav.
    Split: the cuts between blocks are silences of ~0.5-0.8s; match them to each script's character count (rate ~14 chars/second)
 6. Assembly: `python3 assemble.py <dir> '<specs json>'`
 7. Push to the repo under a new dated folder, then create-post in GHL (type reel / post)
