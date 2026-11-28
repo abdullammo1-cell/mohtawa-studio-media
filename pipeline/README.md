@@ -1,5 +1,8 @@
 # Daily content for mohtawa_studio (ستوديو المحتوى)
 
+> Abdullah's decision on 2026-11-28 (in chat): 10 posts a day (6 reels + 4 carousels) and voice from the Mac TTS worker (step 5).
+> This replaces "5 reels + 3 carousels", "8 posts" and "AI Studio, 5 blocks" in the scheduled task's prompt until he updates that prompt.
+
 ## Daily output
 From 2026-12-02: 10 posts a day = 6 reels + 4 carousels, scheduled in the Cash Process (GHL) for the day after the last scheduled day.
 Times (UTC): reels 07:00, 10:00, 13:30, 15:00, 17:00, 20:00 | carousels 08:30, 12:00, 16:00, 18:30
