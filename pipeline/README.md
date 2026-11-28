@@ -32,6 +32,7 @@ Reel mix for 6: tool demo (07:00), خطأ وصح, محادثة, a second tool de
 5. Voiceover, PRIMARY (fully automatic, no browser, no download): the Mac worker in /Users/abdullahadeeb/Claude Downloads/mohtawa-tts (source in pipeline/tts/, installed once by Abdullah with install.sh, which stores his Gemini API key in gemini_key.txt; never read, copy or print that file).
    One request per reel: write /mnt/user-data/outputs/tts/<name>.json = {"name":"d11r1","voice":"Koda","style":"<style below>","text":"<script>"} and device_commit_files it to .../mohtawa-tts/requests/<name>.json.
    A launchd job runs every minute and writes .../mohtawa-tts/out/<name>.wav (24kHz mono), or out/<name>.err. Poll with device_list_dir on out/ (every ~30 s, up to ~6 min), then device_stage_files the wavs. No splitting needed.
+   Installed and tested 2026-11-28 (test.wav, gemini-3.8-flash-tts, about 5 s per request).
    If nothing appears after 4 minutes, or out/ holds .err files, or gemini_key.txt is missing, use the browser fallback below, and tell Abdullah what the .err says.
    Voiceover, FALLBACK: Gemini TTS in Google AI Studio (built-in browser on the Mac), voice Koda, style:
    "Native Gulf Arabic dialect (Saudi/Emirati colloquial, not Modern Standard). Young male content creator, energetic, confident and friendly, fast-paced Instagram reel delivery."
