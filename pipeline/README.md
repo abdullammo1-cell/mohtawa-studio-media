@@ -1,8 +1,10 @@
 # Daily content for mohtawa_studio (ستوديو المحتوى)
 
 ## Daily output
-5 reels + 3 carousels, scheduled in the Cash Process (GHL) for the day after the last scheduled day.
-Times (UTC): reels 07:00, 11:00, 14:30, 17:00, 19:30 | carousels 09:00, 13:00, 18:00
+From 2026-12-02: 10 posts a day = 6 reels + 4 carousels, scheduled in the Cash Process (GHL) for the day after the last scheduled day.
+Times (UTC): reels 07:00, 10:00, 13:30, 15:00, 17:00, 20:00 | carousels 08:30, 12:00, 16:00, 18:30
+(Up to 2026-12-01 it was 5 reels + 3 carousels: reels 07:00, 11:00, 14:30, 17:00, 19:30 | carousels 09:00, 13:00, 18:00)
+Reel mix for 6: tool demo (07:00), خطأ وصح, محادثة, a second tool demo or قائمة, قائمة تتكشّف (17:00, best slot), هوك ثابت.
 
 ## Fixed IDs
 - GHL location: iYGn4djhrRTKKK1clEHB
@@ -24,7 +26,11 @@ Times (UTC): reels 07:00, 11:00, 14:30, 17:00, 19:30 | carousels 09:00, 13:00, 1
    محادثة: each line a message, + continues the same side (11 lines max)
    هوك ثابت: one line (keep ? and ! next to plain words, not after an *asterisk* word)
 4. Demos: `python3 recdemo.py cal|hooks|ideas` (30-day plan / hooks library / 100-ideas library, ideas used 2026-11-27, hooks used 2026-11-29), rec5 demo used 2026-11-30 (edit TXT via sed into rec5d9.py, overlay hook + 3 pills with ffmpeg, then assemble kind chat), rec5.py = reel maker, `python3 reccar.py "<topic>" points.txt out` = carousel maker + "حوّله إلى ريل" (used 2026-11-26 and 2026-12-01, the 2026-12-01 version with hook + 3 pills, see 2026-12-01/src/pills.py)
-5. Voiceover: Gemini TTS in Google AI Studio (built-in browser on the Mac), voice Koda, style:
+5. Voiceover, PRIMARY (fully automatic, no browser, no download): the Mac worker in /Users/abdullahadeeb/Claude Downloads/mohtawa-tts (source in pipeline/tts/, installed once by Abdullah with install.sh, which stores his Gemini API key in gemini_key.txt; never read, copy or print that file).
+   One request per reel: write /mnt/user-data/outputs/tts/<name>.json = {"name":"d11r1","voice":"Koda","style":"<style below>","text":"<script>"} and device_commit_files it to .../mohtawa-tts/requests/<name>.json.
+   A launchd job runs every minute and writes .../mohtawa-tts/out/<name>.wav (24kHz mono), or out/<name>.err. Poll with device_list_dir on out/ (every ~30 s, up to ~6 min), then device_stage_files the wavs. No splitting needed.
+   If nothing appears after 4 minutes, or out/ holds .err files, or gemini_key.txt is missing, use the browser fallback below, and tell Abdullah what the .err says.
+   Voiceover, FALLBACK: Gemini TTS in Google AI Studio (built-in browser on the Mac), voice Koda, style:
    "Native Gulf Arabic dialect (Saudi/Emirati colloquial, not Modern Standard). Young male content creator, energetic, confident and friendly, fast-paced Instagram reel delivery."
    Put the 5 scripts in 5 blocks, generate, then Download -> the file lands in ~/Downloads as "Generated Audio <date> - <time>.wav"
    New AI Studio UI (Nov 2026): Create new dialog -> blocks alternate Speaker 1/2, so set BOTH speakers to Koda in Speaker settings, and set Style on each block (the Style button keeps the name "Style", use nth(i)).
