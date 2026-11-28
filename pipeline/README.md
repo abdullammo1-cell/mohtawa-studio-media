@@ -5,7 +5,7 @@
 
 ## Cloud-only mode (no Mac needed), from 2026-11-28
 - Tool: download it from Google Drive (connector), file id 1fvUtx0285M7nnWCSg-2fgrdFg04DgGel (content-tool.html, folder "mohtawa_studio pipeline" 17VISDIYJnx29DGOfY5hbXgE1x7HHeTlx), save as /home/claude/work/tool.html. If Abdullah updates the tool he replaces that Drive file.
-- Voice: the Gemini API key is in a file named gemini_key in that same Drive folder (read it with the Drive connector, export GEMINI_API_KEY, never print it, never write it to the repo or anywhere else). Then per reel: `python3 pipeline/tts/cloud_tts.py vN.wav "<style>" "<script>"`. Convert each to 48k stereo before assemble. If the call fails (blocked domain, bad key), fall back to the Mac worker (step 5) if the Mac is reachable, otherwise silent reels, and tell Abdullah the error.
+- Voice: the Gemini API key is in the file gemini_key.txt (or gemini_key) in that same Drive folder (read it with the Drive connector, export GEMINI_API_KEY, never print it, never write it to the repo or anywhere else). Then per reel: `python3 pipeline/tts/cloud_tts.py vN.wav "<style>" "<script>"`. Convert each to 48k stereo before assemble. If the call fails (blocked domain, bad key), fall back to the Mac worker (step 5) if the Mac is reachable, otherwise silent reels, and tell Abdullah the error.
 - GHL: use the cloud GHL connector (mcp__GHL__execute_operation, operationId create-post, locationId iYGn4djhrRTKKK1clEHB), same accountIds / userId / media format as below. Describe the operation first.
 - No copy to the Mac Desktop in cloud mode; the repo folder is the archive.
 
