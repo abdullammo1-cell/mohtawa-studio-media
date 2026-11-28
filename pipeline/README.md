@@ -32,7 +32,7 @@ Times (UTC): reels 07:00, 11:00, 14:30, 17:00, 19:30 | carousels 09:00, 13:00, 1
    Warning: two downloads in the same minute overwrite each other. Wait for the minute to change between downloads.
    2026-11-29: with the Claude app not open on the Mac (unattended run), Download saved nothing to ~/Downloads, so day 8 went out silent (text reels + demo with caption pills, src/pills.py). Silent track: ffmpeg anullsrc as the vo wav.
    2026-11-30: AI Studio showed "Choose an account" with every Google account signed out, so day 9 went out silent too. Abdullah has to sign back in to AI Studio in the built-in browser (Claude can't enter passwords).
-   2026-12-01: still signed out (third silent day in a row). Desktop/Content Tool and ~/Downloads were not connected at the start; device_request_folder_access granted them.
+   2026-12-01: signed out at the scheduled run; Abdullah signed back in to the built-in browser the same day and the day-10 reels were re-made with voice (same filenames, so the GHL posts did not change). AI Studio now shows "No API key selected" but Run still works. Desktop/Content Tool and ~/Downloads were not connected at the start; device_request_folder_access granted them.
    Stats so far: comments only on tool demos (30-day plan, idea to reel) and list reels at 17:00 (trust posts = 4 comments). Keep a demo at 07:00 and a list at 17:00.
    Split: the cuts between blocks are silences of ~0.5-0.8s; match them to each script's character count (rate ~14 chars/second)
 6. Assembly: `python3 assemble.py <dir> '<specs json>'`
