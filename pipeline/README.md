@@ -23,7 +23,7 @@ Times (UTC): reels 07:00, 11:00, 14:30, 17:00, 19:30 | carousels 09:00, 13:00, 1
    قائمة تتكشّف: title + 5 short items max
    محادثة: each line a message, + continues the same side (11 lines max)
    هوك ثابت: one line (keep ? and ! next to plain words, not after an *asterisk* word)
-4. Demos: `python3 recdemo.py cal|hooks|ideas` (30-day plan / hooks library / 100-ideas library, ideas used 2026-11-27, hooks used 2026-11-29), rec5 demo used 2026-11-30 (edit TXT via sed into rec5d9.py, overlay hook + 3 pills with ffmpeg, then assemble kind chat), rec5.py = reel maker, `python3 reccar.py "<topic>" points.txt out` = carousel maker + "حوّله إلى ريل" (used 2026-11-26)
+4. Demos: `python3 recdemo.py cal|hooks|ideas` (30-day plan / hooks library / 100-ideas library, ideas used 2026-11-27, hooks used 2026-11-29), rec5 demo used 2026-11-30 (edit TXT via sed into rec5d9.py, overlay hook + 3 pills with ffmpeg, then assemble kind chat), rec5.py = reel maker, `python3 reccar.py "<topic>" points.txt out` = carousel maker + "حوّله إلى ريل" (used 2026-11-26 and 2026-12-01, the 2026-12-01 version with hook + 3 pills, see 2026-12-01/src/pills.py)
 5. Voiceover: Gemini TTS in Google AI Studio (built-in browser on the Mac), voice Koda, style:
    "Native Gulf Arabic dialect (Saudi/Emirati colloquial, not Modern Standard). Young male content creator, energetic, confident and friendly, fast-paced Instagram reel delivery."
    Put the 5 scripts in 5 blocks, generate, then Download -> the file lands in ~/Downloads as "Generated Audio <date> - <time>.wav"
@@ -32,6 +32,8 @@ Times (UTC): reels 07:00, 11:00, 14:30, 17:00, 19:30 | carousels 09:00, 13:00, 1
    Warning: two downloads in the same minute overwrite each other. Wait for the minute to change between downloads.
    2026-11-29: with the Claude app not open on the Mac (unattended run), Download saved nothing to ~/Downloads, so day 8 went out silent (text reels + demo with caption pills, src/pills.py). Silent track: ffmpeg anullsrc as the vo wav.
    2026-11-30: AI Studio showed "Choose an account" with every Google account signed out, so day 9 went out silent too. Abdullah has to sign back in to AI Studio in the built-in browser (Claude can't enter passwords).
+   2026-12-01: still signed out (third silent day in a row). Desktop/Content Tool and ~/Downloads were not connected at the start; device_request_folder_access granted them.
+   Stats so far: comments only on tool demos (30-day plan, idea to reel) and list reels at 17:00 (trust posts = 4 comments). Keep a demo at 07:00 and a list at 17:00.
    Split: the cuts between blocks are silences of ~0.5-0.8s; match them to each script's character count (rate ~14 chars/second)
 6. Assembly: `python3 assemble.py <dir> '<specs json>'`
 7. Push to the repo under a new dated folder, then create-post in GHL (type reel / post)
